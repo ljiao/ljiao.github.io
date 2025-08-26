@@ -645,11 +645,9 @@
     }
 	
 	// Set the topics
-	document.getElementById("title_topic1").innerText += " Edge/Cloud Computing";
+	document.getElementById("title_topic1").innerText += " Cloud/Edge Computing";
 	document.getElementById("title_topic2").innerText += " AI Systems";
-	document.getElementById("title_topic3").innerText += " Cybersecurity";
-	document.getElementById("title_topic4").innerText += " Energy Systems";
-	document.getElementById("title_topic5").innerText += " Multimedia";
+	document.getElementById("title_topic3").innerText += " Applications (e.g., Cybersecurity, Multimedia)";
 	
 	papersByTopic = true;
 	    
@@ -663,10 +661,6 @@
     	 	document.getElementById("papers_topic2").appendChild(items[i].cloneNode(true));
     	else if (items[i].getAttribute("topic") == "topic3")
     	 	document.getElementById("papers_topic3").appendChild(items[i].cloneNode(true));
-    	else if (items[i].getAttribute("topic") == "topic4")
-    	 	document.getElementById("papers_topic4").appendChild(items[i].cloneNode(true));
-    	else if (items[i].getAttribute("topic") == "topic5")
-    	 	document.getElementById("papers_topic5").appendChild(items[i].cloneNode(true));
     	else
     		alert("JavaScript error: At least one paper does not have a topic!");
   	}
