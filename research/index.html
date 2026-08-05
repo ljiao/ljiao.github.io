@@ -646,6 +646,8 @@
 	
 	var searchStatus = false;
 	var perYearView = false;
+
+	setPaperListStartNumber();
 	
 	$("a[href='#papers_by_year']").on('shown.bs.tab', function () {
 	document.getElementById("switchListViewIcon").style.display = "";
@@ -1118,6 +1120,13 @@
 	
 	// Invoke "setStatistics();" if needed
 	function setStatsAndMakeBubbleDisappearTimeOut() { setTimeout(function(){ makeBubbleDisappear(); }, 1000); }
+
+	function setPaperListStartNumber () {
+		const list1 = document.getElementById('papers');
+  		const list2 = document.getElementById('papers_in_Chinese');	// This list may not exist at all.
+  		const totalItems = list1.children.length + (list2 ? list2.children.length : 0);
+  		list1.setAttribute('start', totalItems);
+	}
 	</script>
 
 
