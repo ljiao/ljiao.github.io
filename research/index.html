@@ -532,7 +532,7 @@
     </li>
     </ol>
 
-	<h4>Papers in Chinese</h4>
+	<h4 id="papers_in_Chinese_head">Papers in Chinese</h4>
 	<ol id="papers_in_Chinese" class="fa-ul" reversed>
 	<li itemscope itemtype="//schema.org/CreativeWork">
     Yining Zhang, <strong>Lei Jiao</strong>, Konglin Zhu, Yebo Feng, Lin Zhang, Jiahua Xu, "A Blockchain-Enabled Carbon-Neutral Edge Intelligence Approach for Streaming Data Inference", Journal of Computer Research and Development, <i>accepted</i>, May 2026.
@@ -745,12 +745,14 @@
 		document.getElementById('papers').removeAttribute('start');
 
 		document.getElementById('papers_in_Chinese')?.style.setProperty('display', 'none');
+		document.getElementById('papers_in_Chinese_head')?.style.setProperty('display', 'none');
 	});
 	
 	$('#searchbtns').on('hidden.bs.collapse', function () {
   		quitSearch();
 
 		document.getElementById('papers_in_Chinese')?.style.setProperty('display', '');
+		document.getElementById('papers_in_Chinese_head')?.style.setProperty('display', 'none');
 
 		setPaperListStartNumber();
 	});
