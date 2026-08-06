@@ -743,10 +743,14 @@
   		searchStatus = true;
 
 		document.getElementById('papers').removeAttribute('start');
+
+		document.getElementById('papers_in_Chinese')?.style.setProperty('display', 'none');
 	});
 	
 	$('#searchbtns').on('hidden.bs.collapse', function () {
   		quitSearch();
+
+		document.getElementById('papers_in_Chinese')?.style.setProperty('display', '');
 
 		setPaperListStartNumber();
 	});
